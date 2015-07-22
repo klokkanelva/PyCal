@@ -14,7 +14,19 @@ else:
     user_input_year = user_input[-4:]   # otherwise, we take the last 4 characters of the entered
                                         # input and assigns it to the year
 
-example_calendar = {"Year":user_input_year{'Month':'January':{1:{'Day':'monday''Events':None'Etc':None}}}}
+
+example_calendar = {'Year': user_input_year,
+                    'month':'January',
+                    'day': {
+                        1: {
+                            'Weekday': 'Monday'
+                            'Events': ''
+                        }
+                        2: {
+                            'Weekday': 'Tuesday'
+                            'Events': ''
+                        }
+                    }}
 # ^^^ OK so we're getting a syntax error on the above code
 # maybe it'd be better to do a list of tuples instead? Example below:
 example_calendar = [("Year":user_input_year), ("Month":"user_input_month"), ("Day":user_input_day), ("Events":None), ("Etc":None)]
