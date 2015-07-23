@@ -3,8 +3,8 @@ from termcolor import colored, cprint
 
 week_dict = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
 
-# you have to enter the date in quotes or it'll do division
-user_input = input("Enter date for event\n") # right now only works when entering dates in the form of 22/7 or similar
+# Fixed so that it doesn't do division by using "raw_input" instead
+user_input = raw_input("Enter date for event\n") # right now only works when entering dates in the form of 22/7 or similar
 user_input_date = user_input.split("/") # splits user input into a list
 user_input_day = int(user_input_date[0])
 user_input_month = int(user_input_date[1])
