@@ -1,5 +1,8 @@
 from datetime import datetime
 from termcolor import colored, cprint
+from sys import version
+
+if version[0] == '2': input = raw_input # make input compatible with py 2 and 3
 
 today = datetime.today()                # sets today to a variable we can call
 current_year = today.year               # sets the variable for the current year
@@ -7,7 +10,7 @@ current_year = today.year               # sets the variable for the current year
 week_dict = {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}
 
 # Fixed so that it doesn't do division by using "raw_input" instead
-user_input = raw_input("Enter date for event\n") # right now only works when entering dates in the form of 22/7 or similar
+user_input = input("Enter date for event\n") # right now only works when entering dates in the form of 22/7 or similar
 user_input_date = user_input.split("/") # splits user input into a list
 user_input_day = int(user_input_date[0])
 user_input_month = int(user_input_date[1])
