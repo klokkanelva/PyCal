@@ -1,6 +1,7 @@
 from datetime import datetime
 from termcolor import colored, cprint
 from sys import version
+import re
 
 if version[0] == '2': input = raw_input # make input compatible with py 2 and 3
 
